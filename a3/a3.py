@@ -879,7 +879,7 @@ class ImageLevelView(LevelView):
                 # Resize PIL.Image to fit current cell size
                 self._store_image_tk(
                     tile_id, 
-                    self._images_raw[tile_id].resize(size)
+                    self._images_raw[tile_id].resize(size, Image.NEAREST)
                 )
 
         # Update image sizes
@@ -911,7 +911,7 @@ class ImageLevelView(LevelView):
             size: The desired (width, height) of image.
         """
         for tile_id, image in self._images_raw.items():
-            self._store_image_tk(tile_id, image.resize(size))
+            self._store_image_tk(tile_id, image.resize(size, Image.NEAREST))
 
 class ControlsFrame(tk.Frame):
     """ Displays game state control buttons and timer GUI objects. """
