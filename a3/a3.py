@@ -10,7 +10,7 @@ from a3_support import AbstractGrid
 from constants import *
 
 GAME_TITLE = "MazeRunner"
-IMAGE_FILE = "images/"
+IMAGE_FILE = "images-custom/"
 
 DEFAULT_PADDING = 10
 
